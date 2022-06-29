@@ -90,56 +90,25 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
       elevation: 10,
       backgroundColor: Colors.white,
       expandedHeight: 60,
-      // shape: const RoundedRectangleBorder(
-      //     borderRadius: BorderRadius.only(
-      //         bottomLeft: Radius.circular(40),
-      //         bottomRight: Radius.circular(40))),
       flexibleSpace: FlexibleSpaceBar(
         centerTitle: true,
-        title: Text("Transactions",
-                         style: AppTextStyles.boldSmallTextStyle),
+        title: Text("Transactions", style: AppTextStyles.boldSmallTextStyle),
       ),
       actions: [
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: CircleAvatar(
-                        radius: 18,
-                        backgroundColor: Colors.grey,
-                        child: CircleAvatar(
-                            radius: 17,
-                            backgroundColor: Colors.white,
-                            child: Icon(
-                              Icons.filter_list_outlined,
-                              color: Colors.black,
-                            ))),
+              radius: 18,
+              backgroundColor: Colors.grey,
+              child: CircleAvatar(
+                  radius: 17,
+                  backgroundColor: Colors.white,
+                  child: Icon(
+                    Icons.filter_list_outlined,
+                    color: Colors.black,
+                  ))),
         ),
       ],
-      // flexibleSpace: FlexibleSpaceBar(
-      //   centerTitle: true,
-      //   background: Padding(
-      //     padding: const EdgeInsets.all(8.0),
-      //     child: Row(
-      //       children: const [
-      //         Spacer(),
-      //         Expanded(
-      //             child: Text("Transactions",
-      //                 style: AppTextStyles.boldTextStyle)),
-      //         Expanded(
-      //           child: CircleAvatar(
-      //               radius: 18,
-      //               backgroundColor: Colors.grey,
-      //               child: CircleAvatar(
-      //                   radius: 17,
-      //                   backgroundColor: Colors.white,
-      //                   child: Icon(
-      //                     Icons.filter_list_outlined,
-      //                     color: Colors.black,
-      //                   ))),
-      //         ),
-      //       ],
-      //     ),
-      //   )
-      // ),
     );
   }
 
@@ -148,7 +117,6 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
       height: 130,
       width: 110,
       child: Card(
-        //elevation: 10,
         semanticContainer: true,
         color: list[index].colors,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -218,16 +186,20 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
                     children: <Widget>[
                       Expanded(
                           child: Container(
-                              child: Text(transactionList[index].name!,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                style: AppTextStyles.boldBlackSmallTextStyle,))),
+                              child: Text(
+                        transactionList[index].name!,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTextStyles.boldBlackSmallTextStyle,
+                      ))),
                       SizedBox(width: 5),
                       Container(
-                          child: Text(transactionList[index].amount!,
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                            style: AppTextStyles.boldBlackSmallTextStyle,))
+                          child: Text(
+                        transactionList[index].amount!,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTextStyles.boldBlackSmallTextStyle,
+                      ))
                     ],
                   ),
                   SizedBox(height: 2),
@@ -238,8 +210,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
                           child: Text(transactionList[index].time!,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style:
-                                  AppTextStyles.lightGreyBigTextStyle)),
+                              style: AppTextStyles.lightGreyBigTextStyle)),
                     ],
                   ),
                 ],
