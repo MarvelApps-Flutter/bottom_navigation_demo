@@ -2,6 +2,9 @@
 
 A new Flutter app for demonstrating Bottom navigation bar.
 
+# Demo
+<img src="https://github.com/MarvelApps-Flutter/bottom_navigation_demo/blob/dev/screenshots/gif/demo.gif" height="480px"></td>
+
 # Android Screenshots
 
 <table>
